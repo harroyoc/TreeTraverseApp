@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { TreeProvider } from './context/treeContext';
+import Body from 'components/Body';
+import { Header } from 'components/lib';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <TreeProvider>
+            <Header>Tree Traverse App</Header>
+            <Body />
+        </TreeProvider>
+    )
 }
 
 export default App;
